@@ -6,7 +6,7 @@
 /*   By: sajimene <sajimene@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 19:11:36 by sajimene          #+#    #+#             */
-/*   Updated: 2023/03/03 12:48:41 by sajimene         ###   ########.fr       */
+/*   Updated: 2023/03/03 17:44:44 by sajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ int	ft_putstr_fd(char *s, int fd)
 		write(fd, s, 1);
 		s++;
 	}
+	return (1);
 }
+
 /*
 int main()
 {

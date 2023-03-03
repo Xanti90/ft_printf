@@ -6,7 +6,7 @@
 /*   By: sajimene <sajimene@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 09:14:48 by sajimene          #+#    #+#             */
-/*   Updated: 2023/03/03 12:57:03 by sajimene         ###   ########.fr       */
+/*   Updated: 2023/03/03 19:01:49 by sajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	ft_allcases(va_list args, const char format)
 			return(ft_putstr_fd("0x0", 1));
 	}
 	else if (format == 'd' || format == 'i')
-		return (ft_putnbr_base(va_arg(args, int), 1));
+		return (ft_putnbr_base(va_arg(args, int), "0123456789abcdef"));
 	else if (format == 'u')
 		return (ft_putnbr_fd(va_arg(args, unsigned int), 1));
 	else if (format == 'x')
@@ -53,7 +53,7 @@ int	ft_printf(char const *format, ...)
 	va_start(args, format);
 	while (format[i])
 	{
-		if (format[i] == '%' && ft_strchr("cspdiuxX%", format[i + 1] != 0))
+		if (format[i] == '%' && ft_strchr("cspdiuxX%", format[i + 1]))
 		{
 			print_length += ft_allcases(args, format[i + 1]);
 			i++;

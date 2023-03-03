@@ -15,21 +15,25 @@ MY_SOURCES = ft_printf.c \
 				ft_putnbr_fd.c
 
 
-all:    $(NAME)
+MY_OBJECTS = $(MY_SOURCES:.c=.o)
+INCLUDE = ft_printf.h
+
+all: $(NAME)
 
 $(NAME): $(MY_OBJECTS) $(INCLUDE)
-	@ar r $(LIB) $(NAME) $(MY_OBJECTS) $(INCLUDE)
+	$(LIB) $(NAME) $(MY_OBJECTS) $(INCLUDE)
 
 compile:
-	$(CC) $(FLAGS) main.c -L. -lfprintf
+	$(CC) $(FLAGS) main.c -L. -lftprintf
 
 test: re compile
 
 clean:
-		@rm -f $(MY_OBJECTS)
+	$(RM) $(MY_OBJECTS)
 
 fclean: clean
-		@rm -f $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
+
 .PHONY: all clean fclean re
