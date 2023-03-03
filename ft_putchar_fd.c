@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sajimene <sajimene@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/16 18:19:58 by sajimene          #+#    #+#             */
-/*   Updated: 2023/02/07 11:05:25 by sajimene         ###   ########.fr       */
+/*   Created: 2023/01/23 16:54:15 by sajimene          #+#    #+#             */
+/*   Updated: 2023/03/03 12:56:01 by sajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-size_t	ft_strlen(const char *s)
+int	ft_putchar_fd(char c, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
+	write (fd, &c, 1);
+	return (0);
 }
 /*
-int	main()
+int main()
 {
-	char *s = "Hola 42Madrid!";
-	printf("%zu", ft_strlen(s));
+	char c = 'a';
+	int fd = 1;
+	ft_putchar_fd(c, fd);
 	return (0);
 }
 */

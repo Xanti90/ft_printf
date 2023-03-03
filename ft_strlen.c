@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sajimene <sajimene@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/12 11:40:50 by sajimene          #+#    #+#             */
-/*   Updated: 2023/01/25 16:10:56 by sajimene         ###   ########.fr       */
+/*   Created: 2023/01/16 18:19:58 by sajimene          #+#    #+#             */
+/*   Updated: 2023/03/03 13:01:18 by sajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int	ft_isalpha(int c)
+size_t	ft_strlen(const char *s)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }
 /*
 int	main()
 {
-	int c = 'a';
-	printf("%d", ft_isalpha(c));
+	char *s = "Hola 42Madrid!";
+	printf("%zu", ft_strlen(s));
 	return (0);
 }
 */

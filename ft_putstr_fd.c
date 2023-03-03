@@ -6,16 +6,16 @@
 /*   By: sajimene <sajimene@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 19:11:36 by sajimene          #+#    #+#             */
-/*   Updated: 2023/02/02 20:59:00 by sajimene         ###   ########.fr       */
+/*   Updated: 2023/03/03 12:48:41 by sajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_putstr_fd(char *s, int fd)
 {
 	if (!s)
-		return ;
+		return (1);
 	while (*s)
 	{
 		write(fd, s, 1);

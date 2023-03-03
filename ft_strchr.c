@@ -6,11 +6,11 @@
 /*   By: sajimene <sajimene@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 19:00:44 by sajimene          #+#    #+#             */
-/*   Updated: 2023/02/02 20:47:48 by sajimene         ###   ########.fr       */
+/*   Updated: 2023/03/03 12:21:52 by sajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 char	*ft_strchr(const char *s, int c)
 {

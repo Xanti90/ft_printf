@@ -6,6 +6,14 @@ CFLAGS = -Wall -Wextra -Werror
 
 NAME = libftprintf.a
 MY_SOURCES = ft_printf.c \
+				ft_putchar_fd.c \
+				ft_putnbr_base.c \
+				ft_putstr_fd.c \
+				ft_strchr.c \
+				ft_strlen.c \
+				ft_nbrlen_base.c \
+				ft_putnbr_fd.c
+
 
 all:    $(NAME)
 
@@ -19,7 +27,7 @@ test: re compile
 
 clean:
 		@rm -f $(MY_OBJECTS)
-		
+
 fclean: clean
 		@rm -f $(NAME)
 
