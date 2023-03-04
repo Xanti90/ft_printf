@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sajimene <sajimene@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/23 16:54:15 by sajimene          #+#    #+#             */
-/*   Updated: 2023/03/03 12:56:01 by sajimene         ###   ########.fr       */
+/*   Created: 2023/03/04 10:49:20 by sajimene          #+#    #+#             */
+/*   Updated: 2023/03/04 10:49:29 by sajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar_fd(char c, int fd)
+int	ft_putchar(char c)
 {
-	write (fd, &c, 1);
-	return (0);
+	write (1, &c, 1);
+	return (1);
 }
 /*
 int main()

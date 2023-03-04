@@ -6,7 +6,7 @@
 /*   By: sajimene <sajimene@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 19:00:44 by sajimene          #+#    #+#             */
-/*   Updated: 2023/03/03 12:21:52 by sajimene         ###   ########.fr       */
+/*   Updated: 2023/03/04 10:51:34 by sajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,18 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != (char)c)
+	int	i;
+
+	i = 0;
+	while (s[i])
 	{
-		if (*s == '\0')
-		{
-			return (0);
-		}
-		s++;
+		if (s[i] == (char) c)
+			return (&((char *)s)[i]);
+		i++;
 	}
-	return ((char *)s);
+	if (s[i] == (char) c)
+		return (&((char *)s)[i]);
+	return (0);
 }
 /*
 int main()

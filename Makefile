@@ -6,13 +6,14 @@ CFLAGS = -Wall -Wextra -Werror
 
 NAME = libftprintf.a
 MY_SOURCES = ft_printf.c \
-				ft_putchar_fd.c \
+				ft_putchar.c \
 				ft_putnbr_base.c \
-				ft_putstr_fd.c \
+				ft_putnbr_fd.c \
+				ft_putstr.c \
 				ft_strchr.c \
 				ft_strlen.c \
 				ft_nbrlen_base.c \
-				ft_putnbr_fd.c
+				ft_puthex.c
 
 
 MY_OBJECTS = $(MY_SOURCES:.c=.o)

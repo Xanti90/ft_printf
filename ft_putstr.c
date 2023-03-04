@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sajimene <sajimene@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/23 19:11:36 by sajimene          #+#    #+#             */
-/*   Updated: 2023/03/03 17:44:44 by sajimene         ###   ########.fr       */
+/*   Created: 2023/03/04 10:49:46 by sajimene          #+#    #+#             */
+/*   Updated: 2023/03/04 10:49:58 by sajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putstr_fd(char *s, int fd)
+int	ft_putstr(char *s)
 {
+	int	i;
+
+	i = 0;
 	if (!s)
-		return (1);
-	while (*s)
-	{
-		write(fd, s, 1);
-		s++;
-	}
-	return (1);
+		return (write(1, "(null)", 6));
+	while (s[i])
+			i++;
+	return (write(1, s, i));
 }
 
-/*
-int main()
-{
-	char *s = "Hola Caracola!";
-	int fd = 1;
-	ft_putstr_fd(s, fd);
-	return (0);
-}
-*/
+
+
 /*es una función que imprime una cadena de
 *caracteres en un descriptor de archivo dado.
 *La función primero verifica si la cadena
