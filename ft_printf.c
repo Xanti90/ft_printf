@@ -6,7 +6,7 @@
 /*   By: sajimene <sajimene@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 09:14:48 by sajimene          #+#    #+#             */
-/*   Updated: 2023/03/04 11:04:44 by sajimene         ###   ########.fr       */
+/*   Updated: 2023/03/04 12:06:52 by sajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	ft_case(va_list args, const char frmt)
 		ptr = va_arg(args, unsigned long);
 		if (ptr)
 			return (ft_puthex(ptr, frmt));
-		return (ft_putstr("(nil)"));
+		return (ft_putstr("0x0"));
 	}
 	else if (frmt == 'd' || frmt == 'i')
 		return (ft_putnbr_fd(va_arg(args, int), 1));
