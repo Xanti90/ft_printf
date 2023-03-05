@@ -6,7 +6,7 @@
 /*   By: sajimene <sajimene@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 09:27:39 by sajimene          #+#    #+#             */
-/*   Updated: 2023/03/04 10:59:45 by sajimene         ###   ########.fr       */
+/*   Updated: 2023/03/05 15:16:32 by sajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 int		ft_printf(char const *format, ...);
 int		ft_putchar(char c);
 int		ft_putstr(char *s);
-int		ft_putnbr_base(long long int n, const char *base);
+int		ft_putnbr_base(unsigned int n, char *base);
 int		ft_putnbr_fd(long long int n, int fd);
 char	*ft_strchr(const char *s, int c);
 size_t	ft_strlen(const char *s);
